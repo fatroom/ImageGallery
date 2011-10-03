@@ -16,23 +16,51 @@
 		3E37E087143A63E800E5A970 /* MainWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E37E085143A63E800E5A970 /* MainWindow.xib */; };
 		3E37E08A143A63E900E5A970 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E37E089143A63E900E5A970 /* RootViewController.m */; };
 		3E37E08D143A63E900E5A970 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E37E08B143A63E900E5A970 /* RootViewController.xib */; };
+		3E37E096143A648C00E5A970 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E37E095143A648C00E5A970 /* QuartzCore.framework */; };
+		3E37E0A6143A64DA00E5A970 /* libSSToolkit.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E37E0A1143A64B400E5A970 /* libSSToolkit.a */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3E37E0A0143A64B400E5A970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E37E097143A64B400E5A970 /* SSToolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D2AAC07E0554694100DB518D;
+			remoteInfo = SSToolkit;
+		};
+		3E37E0A2143A64B400E5A970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E37E097143A64B400E5A970 /* SSToolkit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B239101D1357DC3E00ADE21B;
+			remoteInfo = SSToolkitTests;
+		};
+		3E37E0A4143A64D200E5A970 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3E37E097143A64B400E5A970 /* SSToolkit.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = D2AAC07D0554694100DB518D;
+			remoteInfo = SSToolkit;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		3E37E06F143A63E800E5A970 /* ImageGallery.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageGallery.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E37E073143A63E800E5A970 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		3E37E075143A63E800E5A970 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3E37E077143A63E800E5A970 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		3E37E07B143A63E800E5A970 /* ImageGallery-Info.plist */ = {isa = PBXFileReference; path = "ImageGallery-Info.plist"; sourceTree = "<group>"; };
+		3E37E07B143A63E800E5A970 /* ImageGallery-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImageGallery-Info.plist"; sourceTree = "<group>"; };
 		3E37E07D143A63E800E5A970 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3E37E07F143A63E800E5A970 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		3E37E081143A63E800E5A970 /* ImageGallery-Prefix.pch */ = {isa = PBXFileReference; path = "ImageGallery-Prefix.pch"; sourceTree = "<group>"; };
-		3E37E082143A63E800E5A970 /* ImageGalleryAppDelegate.h */ = {isa = PBXFileReference; path = ImageGalleryAppDelegate.h; sourceTree = "<group>"; };
+		3E37E081143A63E800E5A970 /* ImageGallery-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageGallery-Prefix.pch"; sourceTree = "<group>"; };
+		3E37E082143A63E800E5A970 /* ImageGalleryAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImageGalleryAppDelegate.h; sourceTree = "<group>"; };
 		3E37E083143A63E800E5A970 /* ImageGalleryAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageGalleryAppDelegate.m; sourceTree = "<group>"; };
 		3E37E086143A63E800E5A970 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainWindow.xib; sourceTree = "<group>"; };
-		3E37E088143A63E900E5A970 /* RootViewController.h */ = {isa = PBXFileReference; path = RootViewController.h; sourceTree = "<group>"; };
+		3E37E088143A63E900E5A970 /* RootViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		3E37E089143A63E900E5A970 /* RootViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		3E37E08C143A63E900E5A970 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/RootViewController.xib; sourceTree = "<group>"; };
+		3E37E095143A648C00E5A970 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		3E37E097143A64B400E5A970 /* SSToolkit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = SSToolkit.xcodeproj; path = Vendor/SSToolkit/SSToolkit.xcodeproj; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +68,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E37E0A6143A64DA00E5A970 /* libSSToolkit.a in Frameworks */,
+				3E37E096143A648C00E5A970 /* QuartzCore.framework in Frameworks */,
 				3E37E074143A63E800E5A970 /* UIKit.framework in Frameworks */,
 				3E37E076143A63E800E5A970 /* Foundation.framework in Frameworks */,
 				3E37E078143A63E800E5A970 /* CoreGraphics.framework in Frameworks */,
@@ -52,7 +82,9 @@
 		3E37E064143A63E700E5A970 = {
 			isa = PBXGroup;
 			children = (
-				3E37E079143A63E800E5A970 /* ImageGallery */,
+				3E37E079143A63E800E5A970 /* Classes */,
+				3E37E07A143A63E800E5A970 /* Supporting Files */,
+				3E37E094143A644800E5A970 /* Resources */,
 				3E37E072143A63E800E5A970 /* Frameworks */,
 				3E37E070143A63E800E5A970 /* Products */,
 			);
@@ -69,24 +101,24 @@
 		3E37E072143A63E800E5A970 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E37E097143A64B400E5A970 /* SSToolkit.xcodeproj */,
 				3E37E073143A63E800E5A970 /* UIKit.framework */,
 				3E37E075143A63E800E5A970 /* Foundation.framework */,
 				3E37E077143A63E800E5A970 /* CoreGraphics.framework */,
+				3E37E095143A648C00E5A970 /* QuartzCore.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		3E37E079143A63E800E5A970 /* ImageGallery */ = {
+		3E37E079143A63E800E5A970 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
 				3E37E082143A63E800E5A970 /* ImageGalleryAppDelegate.h */,
 				3E37E083143A63E800E5A970 /* ImageGalleryAppDelegate.m */,
-				3E37E085143A63E800E5A970 /* MainWindow.xib */,
 				3E37E088143A63E900E5A970 /* RootViewController.h */,
 				3E37E089143A63E900E5A970 /* RootViewController.m */,
-				3E37E08B143A63E900E5A970 /* RootViewController.xib */,
-				3E37E07A143A63E800E5A970 /* Supporting Files */,
 			);
+			name = Classes;
 			path = ImageGallery;
 			sourceTree = "<group>";
 		};
@@ -99,6 +131,25 @@
 				3E37E081143A63E800E5A970 /* ImageGallery-Prefix.pch */,
 			);
 			name = "Supporting Files";
+			path = ImageGallery;
+			sourceTree = "<group>";
+		};
+		3E37E094143A644800E5A970 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E37E085143A63E800E5A970 /* MainWindow.xib */,
+				3E37E08B143A63E900E5A970 /* RootViewController.xib */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		3E37E098143A64B400E5A970 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E37E0A1143A64B400E5A970 /* libSSToolkit.a */,
+				3E37E0A3143A64B400E5A970 /* SSToolkitTests.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -115,6 +166,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				3E37E0A5143A64D200E5A970 /* PBXTargetDependency */,
 			);
 			name = ImageGallery;
 			productName = ImageGallery;
@@ -139,12 +191,35 @@
 			mainGroup = 3E37E064143A63E700E5A970;
 			productRefGroup = 3E37E070143A63E800E5A970 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 3E37E098143A64B400E5A970 /* Products */;
+					ProjectRef = 3E37E097143A64B400E5A970 /* SSToolkit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				3E37E06E143A63E800E5A970 /* ImageGallery */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		3E37E0A1143A64B400E5A970 /* libSSToolkit.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libSSToolkit.a;
+			remoteRef = 3E37E0A0143A64B400E5A970 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		3E37E0A3143A64B400E5A970 /* SSToolkitTests.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = SSToolkitTests.app;
+			remoteRef = 3E37E0A2143A64B400E5A970 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		3E37E06D143A63E800E5A970 /* Resources */ = {
@@ -172,6 +247,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		3E37E0A5143A64D200E5A970 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SSToolkit;
+			targetProxy = 3E37E0A4143A64D200E5A970 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		3E37E07C143A63E800E5A970 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
@@ -187,6 +270,7 @@
 				3E37E086143A63E800E5A970 /* en */,
 			);
 			name = MainWindow.xib;
+			path = ImageGallery;
 			sourceTree = "<group>";
 		};
 		3E37E08B143A63E900E5A970 /* RootViewController.xib */ = {
@@ -195,6 +279,7 @@
 				3E37E08C143A63E900E5A970 /* en */,
 			);
 			name = RootViewController.xib;
+			path = ImageGallery;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -248,7 +333,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageGallery/ImageGallery-Prefix.pch";
+				HEADER_SEARCH_PATHS = Vendor/SSToolkit;
 				INFOPLIST_FILE = "ImageGallery/ImageGallery-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -259,7 +349,12 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageGallery/ImageGallery-Prefix.pch";
+				HEADER_SEARCH_PATHS = Vendor/SSToolkit;
 				INFOPLIST_FILE = "ImageGallery/ImageGallery-Info.plist";
+				OTHER_LDFLAGS = (
+					"-all_load",
+					"-ObjC",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
