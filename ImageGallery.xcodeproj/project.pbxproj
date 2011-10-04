@@ -21,6 +21,7 @@
 		3E37E0C6143AC90300E5A970 /* SCClassUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E37E0C2143AC90300E5A970 /* SCClassUtils.m */; };
 		3E37E0C7143AC90300E5A970 /* UINavigationBar+SCBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E37E0C4143AC90300E5A970 /* UINavigationBar+SCBackgroundImage.m */; };
 		3E37E0C9143AC94B00E5A970 /* navigation-bar-bg.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E37E0C8143AC94B00E5A970 /* navigation-bar-bg.png */; };
+		3E37E0CD143AD04200E5A970 /* PhotoIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3E37E0CC143AD04200E5A970 /* PhotoIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +71,7 @@
 		3E37E0C3143AC90300E5A970 /* UINavigationBar+SCBackgroundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+SCBackgroundImage.h"; path = "Classes/SCUtils/UINavigationBar+SCBackgroundImage.h"; sourceTree = SOURCE_ROOT; };
 		3E37E0C4143AC90300E5A970 /* UINavigationBar+SCBackgroundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+SCBackgroundImage.m"; path = "Classes/SCUtils/UINavigationBar+SCBackgroundImage.m"; sourceTree = SOURCE_ROOT; };
 		3E37E0C8143AC94B00E5A970 /* navigation-bar-bg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "navigation-bar-bg.png"; path = "Resources/Images/Backgrounds/navigation-bar-bg.png"; sourceTree = "<group>"; };
+		3E37E0CC143AD04200E5A970 /* PhotoIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = PhotoIcon.png; path = Resources/Images/Backgrounds/PhotoIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +188,7 @@
 		3E37E0CB143AC95D00E5A970 /* Backgrounds */ = {
 			isa = PBXGroup;
 			children = (
+				3E37E0CC143AD04200E5A970 /* PhotoIcon.png */,
 				3E37E0C8143AC94B00E5A970 /* navigation-bar-bg.png */,
 			);
 			name = Backgrounds;
@@ -268,6 +271,7 @@
 				3E37E07E143A63E800E5A970 /* InfoPlist.strings in Resources */,
 				3E37E087143A63E800E5A970 /* MainWindow.xib in Resources */,
 				3E37E0C9143AC94B00E5A970 /* navigation-bar-bg.png in Resources */,
+				3E37E0CD143AD04200E5A970 /* PhotoIcon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

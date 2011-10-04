@@ -19,7 +19,11 @@
 {
     RootViewController *tvc = [[RootViewController alloc] initWithStyle:UITableViewStylePlain];
     UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:tvc];
+    UIImageView *toolbarBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navigation-bar-bg.png"]];
+    [nc.toolbar addSubview:toolbarBackground];
+    [toolbarBackground release];
     [SCAppUtils customizeNavigationController:nc];
+    nc.toolbarHidden = NO;
     [self setNavigationController:nc];
     
     [self.window addSubview:[nc view]];
@@ -77,4 +81,8 @@
     [super dealloc];
 }
 
+
+-(void)addPhoto {
+    NSLog(@"Add photo button hitted");
+}
 @end
