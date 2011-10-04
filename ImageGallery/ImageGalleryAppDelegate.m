@@ -7,6 +7,8 @@
 //
 
 #import "ImageGalleryAppDelegate.h"
+#import "SCAppUtils.h"
+#import "RootViewController.h"
 
 @implementation ImageGalleryAppDelegate
 
@@ -15,10 +17,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    // Override point for customization after application launch.
-    // Add the navigation controller's view to the window and display.
-    self.window.rootViewController = self.navigationController;
+    RootViewController *tvc = [[RootViewController alloc] initWithStyle:UITableViewStylePlain];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:tvc];
+    [SCAppUtils customizeNavigationController:nc];
+    [self setNavigationController:nc];
+    
+    [self.window addSubview:[nc view]];
     [self.window makeKeyAndVisible];
+    
+    [tvc release];
+    [nc release];
+    
     return YES;
 }
 
