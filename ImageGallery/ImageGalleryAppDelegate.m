@@ -8,7 +8,7 @@
 
 #import "ImageGalleryAppDelegate.h"
 #import "SCAppUtils.h"
-#import "RootViewController.h"
+#import "PhotoGridController.h"
 
 @implementation ImageGalleryAppDelegate
 
@@ -17,9 +17,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    RootViewController *tvc = [[RootViewController alloc] initWithStyle:UITableViewStylePlain];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:tvc];
-    UIImageView *toolbarBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navigation-bar-bg.png"]];
+    PhotoGridController *vc = [[PhotoGridController alloc] init];
+    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
+    UIImageView *toolbarBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg-toolbar.png"]];
     [nc.toolbar addSubview:toolbarBackground];
     [toolbarBackground release];
     [SCAppUtils customizeNavigationController:nc];
@@ -29,7 +29,7 @@
     [self.window addSubview:[nc view]];
     [self.window makeKeyAndVisible];
     
-    [tvc release];
+    [vc release];
     [nc release];
     
     return YES;

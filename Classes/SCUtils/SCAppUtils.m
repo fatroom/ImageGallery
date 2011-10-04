@@ -15,7 +15,7 @@
     UIImageView *imageView = (UIImageView *)[navBar viewWithTag:kSCNavigationBarBackgroundImageTag];
     if (imageView == nil)
     {
-        imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"navigation-bar-bg.png"]];
+        imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg-navbar.png"]];
         [imageView setTag:kSCNavigationBarBackgroundImageTag];
         [navBar insertSubview:imageView atIndex:0];
         [imageView release];
