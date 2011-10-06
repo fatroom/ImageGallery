@@ -12,12 +12,14 @@
 @implementation PhotoGridController
 
 @synthesize btn = _btn;
+@synthesize images;
 
 #pragma mark -
 #pragma mark UIViewController
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+    self.images = [NSMutableArray array];
 	isEditMode = NO;
 	self.collectionView.extremitiesStyle = SSCollectionViewExtremitiesStyleScrolling;
     _btn = [UIButton buttonWithType:UIButtonTypeCustom];
@@ -57,7 +59,7 @@
 
 
 - (NSUInteger)collectionView:(SSCollectionView *)aCollectionView numberOfItemsInSection:(NSUInteger)section {
-	return 5;
+	return [images count];
 }
 
 
@@ -68,6 +70,7 @@
 	if (item == nil) {
 		item = [[[SCImageCollectionViewItem alloc] initWithReuseIdentifier:itemIdentifier] autorelease];
 	}	
+    [item setImage:[images objectAtIndex:indexPath.row]];
 //	CGFloat size = 80.0f * [[UIScreen mainScreen] scale];
 //	NSInteger i = (50 * indexPath.section) + indexPath.row;
 	
@@ -122,6 +125,23 @@
 }
 
 -(void)pickupPhoto {
-    NSLog(@"Photo button pressed");
+    UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+    picker.delegate = self;
+    picker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;   
+    [self presentModalViewController:picker animated:YES];
 }
+
+- (void)imagePickerControllerDidCancel:(UIImagePickerController *) picker {
+    [self dismissModalViewControllerAnimated:YES];
+    [picker release];
+}
+
+- (void)imagePickerController:(UIImagePickerController *) picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
+    
+    [self.images addObject:[info objectForKey:UIImagePickerControllerOriginalImage]];
+    [self.view reloadData];
+    [[picker parentViewController] dismissModalViewControllerAnimated:YES];
+    [picker release];
+}
+
 @end

@@ -8,10 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PhotoGridController :  SSCollectionViewController {
+@interface PhotoGridController :  SSCollectionViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate> {
     BOOL isEditMode;
+    
 }
 
 @property (readonly) UIButton *btn;
+@property (retain) NSMutableArray *images;
 
 @end

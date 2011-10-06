@@ -11,5 +11,5 @@
 @interface SCImageCollectionViewItem : SSCollectionViewItem
 
 - (id)initWithReuseIdentifier:(NSString *)aReuseIdentifier;
-
+- (void)setImage:(UIImage *)image;
 @end
