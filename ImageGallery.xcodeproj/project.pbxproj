@@ -24,6 +24,7 @@
 		3E37E0C5143AC90300E5A970 /* SCAppUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E37E0C0143AC90300E5A970 /* SCAppUtils.m */; };
 		3E37E0C6143AC90300E5A970 /* SCClassUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E37E0C2143AC90300E5A970 /* SCClassUtils.m */; };
 		3E37E0C7143AC90300E5A970 /* UINavigationBar+SCBackgroundImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E37E0C4143AC90300E5A970 /* UINavigationBar+SCBackgroundImage.m */; };
+		3ED2C194143E18BF001F17C5 /* btn_photo.png in Resources */ = {isa = PBXBuildFile; fileRef = 3ED2C193143E18BF001F17C5 /* btn_photo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		3E37E0C2143AC90300E5A970 /* SCClassUtils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SCClassUtils.m; path = Classes/SCUtils/SCClassUtils.m; sourceTree = SOURCE_ROOT; };
 		3E37E0C3143AC90300E5A970 /* UINavigationBar+SCBackgroundImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "UINavigationBar+SCBackgroundImage.h"; path = "Classes/SCUtils/UINavigationBar+SCBackgroundImage.h"; sourceTree = SOURCE_ROOT; };
 		3E37E0C4143AC90300E5A970 /* UINavigationBar+SCBackgroundImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "UINavigationBar+SCBackgroundImage.m"; path = "Classes/SCUtils/UINavigationBar+SCBackgroundImage.m"; sourceTree = SOURCE_ROOT; };
+		3ED2C193143E18BF001F17C5 /* btn_photo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = btn_photo.png; path = Resources/Images/Buttons/btn_photo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 		3E35AE0E143B9891002325C3 /* Buttons */ = {
 			isa = PBXGroup;
 			children = (
+				3ED2C193143E18BF001F17C5 /* btn_photo.png */,
 				3E35AE0F143B98B7002325C3 /* btn_edit.png */,
 			);
 			name = Buttons;
@@ -305,6 +308,7 @@
 				3E35AE10143B98B7002325C3 /* btn_edit.png in Resources */,
 				3E35AE13143B9F2F002325C3 /* bg-navbar.png in Resources */,
 				3E35AE14143B9F2F002325C3 /* bg-toolbar.png in Resources */,
+				3ED2C194143E18BF001F17C5 /* btn_photo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -11,4 +11,5 @@
 @interface PhotoGridController :  SSCollectionViewController
 
 @property (readonly) UIButton *btn;
+
 @end

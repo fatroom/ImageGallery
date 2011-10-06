@@ -22,8 +22,8 @@
     UIImageView *toolbarBackground = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"bg-toolbar.png"]];
     [nc.toolbar addSubview:toolbarBackground];
     [toolbarBackground release];
+    [nc setToolbarHidden:NO];
     [SCAppUtils customizeNavigationController:nc];
-    nc.toolbarHidden = NO;
     [self setNavigationController:nc];
     
     [self.window addSubview:[nc view]];
@@ -79,10 +79,5 @@
     [_window release];
     [_navigationController release];
     [super dealloc];
-}
-
-
--(void)addPhoto {
-    NSLog(@"Add photo button hitted");
 }
 @end

@@ -25,9 +25,18 @@
     [_btn setBackgroundImage:[UIImage imageNamed:@"btn_edit.png"] forState:UIControlStateNormal];
     [_btn setTitle:@"Edit" forState:UIControlStateNormal];
     [_btn addTarget:self action:@selector(switchBetweenEditMode:) forControlEvents:UIControlEventTouchUpInside];
-	UIBarButtonItem *button = [[UIBarButtonItem alloc] initWithCustomView:_btn];
+    
+    UIBarButtonItem *button;
+	button = [[UIBarButtonItem alloc] initWithCustomView:_btn];
 	self.navigationItem.rightBarButtonItem = button;
-	[button release];
+    [button release];
+    
+    button = [[UIBarButtonItem alloc] initWithImage:[UIImage imageNamed:@"btn_photo.png"] style:UIBarButtonItemStylePlain target:self action:@selector(pickupPhoto)];
+    UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
+    
+    [self setToolbarItems:[NSArray arrayWithObjects:flexibleSpace,button,flexibleSpace, nil]];
+    [flexibleSpace release];
+    [button release];
 }
 
 
@@ -110,5 +119,9 @@
         sender.tag = 0;
         [self.btn setTitle:@"Edit" forState:UIControlStateNormal];
     }
+}
+
+-(void)pickupPhoto {
+    NSLog(@"Photo button pressed");
 }
 @end
