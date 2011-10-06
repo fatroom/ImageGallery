@@ -10,6 +10,8 @@
 
 @implementation SCImageCollectionViewItem
 
+@synthesize owner;
+
 - (id)initWithReuseIdentifier:(NSString *)aReuseIdentifier {
 	if ((self = [super initWithStyle:SSCollectionViewItemStyleImage reuseIdentifier:aReuseIdentifier])) {
         //CGRect frame = self.imageView.frame;
@@ -31,9 +33,13 @@
     if (isEditMode) {
         removeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
         [removeBtn setImage:[UIImage imageNamed:@"btn_close.png"] forState:UIControlStateNormal];
+        [removeBtn addTarget:self action:@selector(deleteImage) forControlEvents:UIControlEventTouchUpInside];
         [removeBtn setFrame:CGRectMake(-10, 0, 30, 30)];
         [self addSubview:removeBtn];
     }
 }
 
+- (void) deleteImage {
+    [owner removeSelectedImage:contentView.image];
+}
 @end

@@ -11,7 +11,10 @@
 @interface SCImageCollectionViewItem : SSCollectionViewItem {
     UIButton *removeBtn;
     UIImageView *contentView;
+    
 }
+
+@property (assign) id owner;
 
 - (id)initWithReuseIdentifier:(NSString *)aReuseIdentifier;
 - (void)setImage:(UIImage *)image;

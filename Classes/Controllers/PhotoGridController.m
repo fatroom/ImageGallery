@@ -72,6 +72,7 @@
 	}	
     [item setImage:[images objectAtIndex:indexPath.row]];
     [item setEditMode:isEditMode];
+    [item setOwner:self];
 //	CGFloat size = 80.0f * [[UIScreen mainScreen] scale];
 //	NSInteger i = (50 * indexPath.section) + indexPath.row;
 	
@@ -143,6 +144,11 @@
     [self.view reloadData];
     [[picker parentViewController] dismissModalViewControllerAnimated:YES];
     [picker release];
+}
+
+-(void) removeSelectedImage:(UIImage *)image {
+    [self.images removeObject:image];
+    [self.view reloadData];
 }
 
 @end
