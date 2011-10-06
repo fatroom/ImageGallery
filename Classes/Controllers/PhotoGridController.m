@@ -43,7 +43,7 @@
 
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation {
-	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
+    if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone) {
 		return toInterfaceOrientation != UIInterfaceOrientationPortraitUpsideDown;
 	}
 	return YES;
@@ -71,6 +71,7 @@
 		item = [[[SCImageCollectionViewItem alloc] initWithReuseIdentifier:itemIdentifier] autorelease];
 	}	
     [item setImage:[images objectAtIndex:indexPath.row]];
+    [item setEditMode:isEditMode];
 //	CGFloat size = 80.0f * [[UIScreen mainScreen] scale];
 //	NSInteger i = (50 * indexPath.section) + indexPath.row;
 	
@@ -96,7 +97,7 @@
 #pragma mark SSCollectionViewDelegate
 
 - (CGSize)collectionView:(SSCollectionView *)aCollectionView itemSizeForSection:(NSUInteger)section {
-	return CGSizeMake(80.0f, 80.0f);
+	return CGSizeMake(80.0f, 90.0f);
 }
 
 /*
@@ -122,6 +123,7 @@
         [self.btn setTitle:@"Done" forState:UIControlStateNormal];
         isEditMode = YES;
     }
+    [self.view reloadData];
 }
 
 -(void)pickupPhoto {
@@ -137,7 +139,6 @@
 }
 
 - (void)imagePickerController:(UIImagePickerController *) picker didFinishPickingMediaWithInfo:(NSDictionary *)info {
-    
     [self.images addObject:[info objectForKey:UIImagePickerControllerOriginalImage]];
     [self.view reloadData];
     [[picker parentViewController] dismissModalViewControllerAnimated:YES];

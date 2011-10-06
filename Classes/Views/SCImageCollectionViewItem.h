@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface SCImageCollectionViewItem : SSCollectionViewItem
+@interface SCImageCollectionViewItem : SSCollectionViewItem {
+    UIButton *removeBtn;
+    UIImageView *contentView;
+}
 
 - (id)initWithReuseIdentifier:(NSString *)aReuseIdentifier;
 - (void)setImage:(UIImage *)image;
+- (void)setEditMode:(BOOL)isEditMode;
 @end
