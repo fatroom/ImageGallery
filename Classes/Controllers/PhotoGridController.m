@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
-	
+	isEditMode = NO;
 	self.collectionView.extremitiesStyle = SSCollectionViewExtremitiesStyleScrolling;
     _btn = [UIButton buttonWithType:UIButtonTypeCustom];
     _btn.frame = CGRectMake(0, 0, 75, 35);    
@@ -112,12 +112,12 @@
 }
 
 -(void)switchBetweenEditMode:(UIBarButtonItem *)sender {
-    if (sender.tag == 0) {
-        sender.tag = 1;
-        [self.btn setTitle:@"Done" forState:UIControlStateNormal];
-    } else {
-        sender.tag = 0;
+    if (isEditMode) {
         [self.btn setTitle:@"Edit" forState:UIControlStateNormal];
+        isEditMode = NO;
+    } else {
+        [self.btn setTitle:@"Done" forState:UIControlStateNormal];
+        isEditMode = YES;
     }
 }
 

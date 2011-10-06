@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PhotoGridController :  SSCollectionViewController
+@interface PhotoGridController :  SSCollectionViewController {
+    BOOL isEditMode;
+}
 
 @property (readonly) UIButton *btn;
 
