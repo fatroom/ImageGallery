@@ -12,6 +12,7 @@
 @implementation PhotoGridController
 
 @synthesize btn = _btn;
+@synthesize photoButton = _photoButton;
 @synthesize images;
 
 #pragma mark -
@@ -37,6 +38,7 @@
     UIBarButtonItem *flexibleSpace = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:nil action:nil];
     
     [self setToolbarItems:[NSArray arrayWithObjects:flexibleSpace,button,flexibleSpace, nil]];
+    _photoButton = button;
     [flexibleSpace release];
     [button release];
 }
@@ -120,9 +122,11 @@
     if (isEditMode) {
         [self.btn setTitle:@"Edit" forState:UIControlStateNormal];
         isEditMode = NO;
+        [self.photoButton setEnabled:YES];
     } else {
         [self.btn setTitle:@"Done" forState:UIControlStateNormal];
         isEditMode = YES;
+        [self.photoButton setEnabled:NO];
     }
     [self.view reloadData];
 }

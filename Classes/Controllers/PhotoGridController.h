@@ -14,6 +14,7 @@
 }
 
 @property (readonly) UIButton *btn;
+@property (readonly) UIBarButtonItem *photoButton;
 @property (retain) NSMutableArray *images;
 
 @end
