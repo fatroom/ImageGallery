@@ -21,7 +21,8 @@
 - (void)viewDidLoad {
 	[super viewDidLoad];
     self.images = [NSMutableArray array];
-	isEditMode = NO;
+    
+   	isEditMode = NO;
 	self.collectionView.extremitiesStyle = SSCollectionViewExtremitiesStyleScrolling;
     _btn = [UIButton buttonWithType:UIButtonTypeCustom];
     _btn.frame = CGRectMake(0, 0, 75, 35);    
@@ -41,6 +42,28 @@
     _photoButton = button;
     [flexibleSpace release];
     [button release];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    NSArray *selectedImage = [NSArray arrayWithArray:self.images];
+    [self.images removeAllObjects];
+    NSArray *serializedImages = [[NSUserDefaults standardUserDefaults]  arrayForKey:@"storedImages"];
+    for (NSData *serializedImage in serializedImages) {
+        UIImage *image = [UIImage imageWithData:serializedImage];
+        [self.images addObject:image];
+    }
+    [self.images addObjectsFromArray:selectedImage];
+    [self.view reloadData];
+}
+
+-(void)viewDidDisappear:(BOOL)animated {
+    NSMutableArray *serializedImages = [NSMutableArray array];
+    for (UIImage *img in self.images) {
+        NSData *serializedImage = UIImagePNGRepresentation(img);
+        [serializedImages addObject:serializedImage];
+    }
+    [[NSUserDefaults standardUserDefaults] setObject:serializedImages forKey:@"storedImages"];
+    [self.images removeAllObjects];
 }
 
 
